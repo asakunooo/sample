@@ -33,10 +33,16 @@ public class SignupService {
 	private final PasswordEncoder passwordEncoder;
 
 	/**
-	 * ユーザ情報テーブル 新規登録
+	 * 画面の入力情報を元にユーザー情報テーブルの新規登録を行います。
 	 * 
-	 * @param form 入力情報
-	 * @return 登録情報(ユーザー情報Entity)、既に同じユーザIDで登録がある場合はEmpty
+	 * <p>ただし、以下のテーブル項目はこの限りではありません。
+	 * <ul>
+	 * <li>パスワード：画面で出力したパスワードがハッシュ化され登録されます。</li>
+	 * <li>権限：常に「商品情報の確認が可能」のコード値が登録されます。</li>
+	 * 
+	 * @patam form 入力情報
+	 * @return 登録情報（ユーザー情報Entity）、既に同じユーザーIDで登録がある場合はEmpty
+	 * 
 	 */
 	public Optional<UserInfo> resistUserInfo(SignupForm form) {
 		var userInfoExistedOpt = repository.findById(form.getLoginId());
