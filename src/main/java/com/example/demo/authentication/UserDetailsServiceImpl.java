@@ -1,3 +1,4 @@
+
 package com.example.demo.authentication;
 
 import java.time.LocalDateTime;
@@ -64,8 +65,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 		return User.withUsername(userInfo.getLoginId())
 				.password(userInfo.getPassword())
-				.authorities(userInfo.getAuthority().getCode())
-				.disabled(userInfo.getStatus().isDisabled())
+				.authorities(userInfo.getAuthorityKind().getCode())
+				.disabled(userInfo.getUserStatusKind().isDisabled())
 				.accountLocked(isAccountLocked)
 				.build();
 	}

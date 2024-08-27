@@ -1,3 +1,4 @@
+
 package com.example.demo.dto;
 
 import java.time.LocalDateTime;
@@ -27,11 +28,14 @@ public class UserListInfo {
 
 	/** 権限 */
 	private String authority;
-	
+
 	/** 登録日時 */
 	private LocalDateTime createTime;
-	
-	/** 更新日時 */
+
+	/** 最終更新日時 */
 	private LocalDateTime updateTime;
+
+	/** 最終更新ユーザ */
+	private String updateUser;
 
 }

@@ -27,5 +27,14 @@ public class AppUtil {
 	public static String getMessage(MessageSource messageSource, String messageId, Object... params) {
 		return messageSource.getMessage(messageId, params, Locale.JAPAN);
 	}
+	/**
+	 * DBのLIKE検索用に、パラメーターにワイルドカードを付与します。
+	 * 
+	 * @param paramパラメーター
+	 * @return 前後にワイルドカードがついたパラメーター
+	 */
+	public static String addWildcard(String param) {
+		return "%" + param +"%";
+	}
 
 }
