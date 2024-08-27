@@ -13,7 +13,7 @@ import com.example.demo.form.LoginForm;
 import lombok.RequiredArgsConstructor;
 
 /**
- * ログイン画面Controllerクラス
+ * ログイン画面 Controller
  * 
  * @author ys-fj
  *
@@ -26,11 +26,11 @@ public class LoginController {
 	private final HttpSession session;
 
 	/**
-	 * 画面の初期表示を行います。
+	 * 初期表示
 	 * 
 	 * @param model モデル
 	 * @param form 入力情報
-	 * @return ログイン画面
+	 * @return 表示画面
 	 */
 	@GetMapping(UrlConst.LOGIN)
 	public String view(Model model, LoginForm form) {
@@ -38,11 +38,11 @@ public class LoginController {
 	}
 
 	/**
-	 * ログインエラー時にセッションからエラーメッセージを取得して、画面の表示を行います。
+	 * ログインエラー画面表示
 	 * 
 	 * @param model モデル
 	 * @param form 入力情報
-	 * @return ログイン画面
+	 * @return 表示画面
 	 */
 	@GetMapping(value = UrlConst.LOGIN, params = "error")
 	public String viewWithError(Model model, LoginForm form) {
