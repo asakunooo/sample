@@ -1,3 +1,4 @@
+
 package com.example.demo.util;
 
 import java.util.Locale;
@@ -5,21 +6,26 @@ import java.util.Locale;
 import org.springframework.context.MessageSource;
 
 /**
- * アプリケーション共通クラス
+ * アプリケーション共通処理クラス
  * 
- * @author asakuno.nako
+ * @author ys-fj
+ *
  */
 public class AppUtil {
-	
+
 	/**
-	 * メッセージIDからメッセージを取得する。
+	 * メッセージIDから、プロパティファイルに定義されているメッセージを取得する。
+	 * 
+	 * <p>取得したメッセージ内で置換が必要な個所がある場合は<br>
+	 * 引数の置換文字群を使って置換を行う。
 	 * 
 	 * @param messageSource メッセージソース
-	 * @param key メッセージキー
+	 * @param messageId メッセージID
 	 * @param params 置換文字群
-	 * @return メッセージ
+	 * @return プロパティファイルから取得したメッセージ
 	 */
-	public static String getMessage(MessageSource messageSource,String key,Object...params) {
-		return messageSource.getMessage(key, params, Locale.JAPAN);
+	public static String getMessage(MessageSource messageSource, String messageId, Object... params) {
+		return messageSource.getMessage(messageId, params, Locale.JAPAN);
 	}
+
 }
