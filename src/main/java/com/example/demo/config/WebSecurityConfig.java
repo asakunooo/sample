@@ -19,7 +19,7 @@ import lombok.RequiredArgsConstructor;
 /**
  * Spring Securityカスタマイズクラス
  * 
- * @author ys-fj
+ * @author asakuno.nako
  *
  */
 @EnableWebSecurity

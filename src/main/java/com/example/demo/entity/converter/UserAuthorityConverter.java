@@ -8,7 +8,7 @@ import com.example.demo.constant.db.AuthorityKind;
 /**
  * ユーザー情報 権限フィールドConverterクラス
  * 
- * @author ys-fj
+ * @author asakuno.nako
  *
  */
 @Converter

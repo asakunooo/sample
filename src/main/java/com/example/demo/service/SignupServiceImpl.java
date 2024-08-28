@@ -19,7 +19,7 @@ import lombok.RequiredArgsConstructor;
 /**
  * ユーザー登録画面Service実装クラス
  * 
- * @author ys-fj
+ * @author asakuno.nako
  *
  */
 @Service

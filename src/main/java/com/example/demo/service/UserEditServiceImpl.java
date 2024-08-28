@@ -17,7 +17,7 @@ import lombok.RequiredArgsConstructor;
 /**
  * ユーザー編集画面Service実装クラス
  * 
- * @author ys-fj
+ * @author asakuno.nako
  *
  */
 @Service

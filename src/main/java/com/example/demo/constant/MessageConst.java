@@ -4,7 +4,7 @@ package com.example.demo.constant;
 /**
  * エラーメッセージID定数クラス
  * 
- * @author ys-fj
+ * @author asakno.nako
  *
  */
 public class MessageConst {

@@ -9,7 +9,7 @@ import lombok.Data;
 /**
  * ユーザー編集画面Formクラス
  * 
- * @author ys-fj
+ * @author asakuno.nako
  *
  */
 @Data

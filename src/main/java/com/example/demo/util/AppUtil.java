@@ -8,7 +8,7 @@ import org.springframework.context.MessageSource;
 /**
  * アプリケーション共通処理クラス
  * 
- * @author ys-fj
+ * @author asakuno.nako
  *
  */
 public class AppUtil {

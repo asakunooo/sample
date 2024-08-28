@@ -4,7 +4,7 @@ package com.example.demo.constant;
 /**
  * View名定数クラス
  * 
- * @author ys-fj
+ * @author asakuno.nako
  *
  */
 public class ViewNameConst {

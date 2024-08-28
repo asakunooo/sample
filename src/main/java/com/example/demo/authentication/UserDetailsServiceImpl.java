@@ -20,7 +20,7 @@ import lombok.RequiredArgsConstructor;
 /**
  * ユーザー情報の定義、生成クラス
  * 
- * @author ys-fj
+ * @author asakuno.nako
  *
  */
 @Component

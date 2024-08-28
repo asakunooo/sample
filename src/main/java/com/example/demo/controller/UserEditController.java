@@ -31,7 +31,7 @@ import lombok.RequiredArgsConstructor;
 /**
  * ユーザー編集画面Controllerクラス
  * 
- * @author ys-fj
+ * @author asakuno.nako
  *
  */
 @Controller

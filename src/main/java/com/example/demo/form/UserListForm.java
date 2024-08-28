@@ -11,7 +11,7 @@ import lombok.Data;
 /**
  * ユーザー登録画面Formクラス
  * 
- * @author ys-fj
+ * @author asakuno.nako
  *
  */
 @Data

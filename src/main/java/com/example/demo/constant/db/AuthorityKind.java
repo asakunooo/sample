@@ -8,7 +8,7 @@ import lombok.Getter;
 /**
  * ユーザー権限種別
  * 
- * @author ys-fj
+ * @author asakuno.nako
  */
 @Getter
 @AllArgsConstructor

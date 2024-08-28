@@ -9,7 +9,7 @@ import com.example.demo.entity.UserInfo;
 /**
  * ユーザー編集画面Serviceクラス
  * 
- * @author ys-fj
+ * @author asakuno.nako
  *
  */
 public interface UserEditService {

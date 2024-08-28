@@ -6,7 +6,7 @@ import lombok.Getter;
 /**
  * ユーザー状態種別
  * 
- * @author ys-fj
+ * @author asakuno.nako
  */
 @Getter
 @AllArgsConstructor

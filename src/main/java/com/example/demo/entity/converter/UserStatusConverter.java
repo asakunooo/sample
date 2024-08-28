@@ -8,7 +8,7 @@ import com.example.demo.constant.db.UserStatusKind;
 /**
  * ユーザー情報 ユーザー状態種別フィールドConverterクラス
  * 
- * @author ys-fj
+ * @author asakuno.nako
  *
  */
 @Converter

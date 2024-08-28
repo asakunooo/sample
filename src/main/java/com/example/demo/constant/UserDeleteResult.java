@@ -6,7 +6,7 @@ import lombok.Getter;
 /**
  * 処理結果種別
  * 
- * @author ys-fj
+ * @author asakuno.nako
  */
 @Getter
 @AllArgsConstructor

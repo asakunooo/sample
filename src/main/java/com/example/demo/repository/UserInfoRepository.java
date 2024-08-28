@@ -12,7 +12,7 @@ import com.example.demo.entity.UserInfo;
 /**
  * ユーザー情報テーブルRepositoryクラス
  * 
- * @author ys-fj
+ * @author asakuno.nako
  *
  */
 public interface UserInfoRepository extends JpaRepository<UserInfo, String> {

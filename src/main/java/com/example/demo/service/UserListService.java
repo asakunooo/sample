@@ -10,7 +10,7 @@ import com.example.demo.dto.UserSearchInfo;
 /**
  * ユーザー一覧画面Serviceクラス
  * 
- * @author ys-fj
+ * @author asakuno.nako
  *
  */
 public interface UserListService {

@@ -11,7 +11,7 @@ import com.github.dozermapper.core.Mapper;
 /**
  * Bean定義クラス
  * 
- * @author ys-fj
+ * @author asakuno.nako
  *
  */
 @Configuration

@@ -8,7 +8,7 @@ import lombok.Data;
 /**
  * ユーザー一覧画面DTOクラス
  * 
- * @author ys-fj
+ * @author asakuno.nako
  *
  */
 @Data

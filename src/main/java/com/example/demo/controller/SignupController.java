@@ -25,7 +25,7 @@ import lombok.RequiredArgsConstructor;
 /**
  * ユーザー登録画面Controllerクラス
  * 
- * @author ys-fj
+ * @author asakuno.nako
  *
  */
 @Controller

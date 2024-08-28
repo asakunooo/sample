@@ -3,7 +3,7 @@ package com.example.demo.constant;
 /**
  * URL 定数クラス
  * 
- * @author ys-fj
+ * @author asakuno.nako
  *
  */
 public class UrlConst {

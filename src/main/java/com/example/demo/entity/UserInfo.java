@@ -20,7 +20,7 @@ import lombok.Data;
 /**
  * ユーザー情報テーブルEntityクラス
  * 
- * @author ys-fj
+ * @author asakuno.nako
  *
  */
 @Entity
