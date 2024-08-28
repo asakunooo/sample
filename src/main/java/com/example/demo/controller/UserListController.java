@@ -1,4 +1,7 @@
+
 package com.example.demo.controller;
+
+import jakarta.servlet.http.HttpSession;
 
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
@@ -6,7 +9,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.example.demo.constant.SessionKeyConst;
 import com.example.demo.constant.UrlConst;
+import com.example.demo.constant.UserDeleteResult;
 import com.example.demo.constant.ViewNameConst;
 import com.example.demo.constant.db.AuthorityKind;
 import com.example.demo.constant.db.UserStatusKind;
@@ -37,6 +42,9 @@ public class UserListController {
 	/** メッセージソース */
 	private final MessageSource messageSource;
 
+	/** セッションオブジェクト */
+	private final HttpSession session;
+
 	/** モデルキー：ユーザー情報リスト */
 	private static final String KEY_USERLIST = "userList";
 
@@ -56,6 +64,8 @@ public class UserListController {
 	 */
 	@GetMapping(UrlConst.USER_LIST)
 	public String view(Model model, UserListForm form) {
+		session.removeAttribute(SessionKeyConst.SELECETED_LOGIN_ID);
+
 		var userInfos = service.editUserList();
 		model.addAttribute(KEY_USERLIST, userInfos);
 
@@ -88,13 +98,26 @@ public class UserListController {
 	 * 
 	 * @param model モデル
 	 * @param form 入力情報
+	 * @return リダイレクトURL
+	 */
+	@PostMapping(value = UrlConst.USER_LIST, params = "edit")
+	public String updateUser(UserListForm form) {
+		session.setAttribute(SessionKeyConst.SELECETED_LOGIN_ID, form.getSelectedLoginId());
+		return AppUtil.doRedirect(UrlConst.USER_EDIT);
+	}
+
+	/**
+	 * 選択行のユーザー情報を削除して、最新情報で画面を再表示します。
+	 * 
+	 * @param model モデル
+	 * @param form 入力情報
 	 * @return 表示画面
 	 */
 	@PostMapping(value = UrlConst.USER_LIST, params = "delete")
 	public String deleteUser(Model model, UserListForm form) {
-		var userDeleteResult = service.deleteUserInfoById(form.getSelectedLoginId());
-		model.addAttribute("isError", userDeleteResult == userDeleteResult.ERROR);
-		model.addAttribute("message", AppUtil.getMessage(messageSource, userDeleteResult.getMessageId()));
+		var executeResult = service.deleteUserInfoById(form.getSelectedLoginId());
+		model.addAttribute("isError", executeResult == UserDeleteResult.ERROR);
+		model.addAttribute("message", AppUtil.getMessage(messageSource, executeResult.getMessageId()));
 
 		// 削除後、フォーム情報の「選択されたログインID」は不要になるため、クリアします。
 		return searchUser(model, form.clearSelectedLoginId());

@@ -37,4 +37,13 @@ public class AppUtil {
 		return "%" + param +"%";
 	}
 
+	/**
+	 * リダイレクト先のURLを受け取って、リダイレクトURLを作成します。
+	 * 
+	 * @param url
+	 * @return
+	 */
+	public static String doRedirect(String url) {
+		return "redirect:" + url;
+	}
 }
