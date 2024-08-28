@@ -43,6 +43,7 @@ public class UserListServiceImpl implements UserListService {
 	/**
 	 * {@inheritDoc}
 	 */
+	@Override
 	public List<UserListInfo> editUserListByParam(UserSearchInfo dto) {
 		return toUserListInfos(findUserInfoByParam(dto));
 	}
@@ -50,6 +51,7 @@ public class UserListServiceImpl implements UserListService {
 	/**
 	 * {@inheritDoc}
 	 */
+	@Override
 	public UserDeleteResult deleteUserInfoById(String loginId) {
 		var userInfo = repository.findById(loginId);
 		if (userInfo.isEmpty()) {
